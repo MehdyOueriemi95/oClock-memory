@@ -1,0 +1,24 @@
+// Fichier SASS qui gère le style de la barre de progression avec le temps
+
+#progressBar {
+    width: 90%;
+    margin: 10px auto;
+    height: 22px;
+    // C'est la variable $blue qu'il y'a dans _variable.scss
+    background-color: $blue;
+    border-radius: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    div {
+        height: 100%;
+        text-align: right;
+        padding: 0 10px;
+        // on met la meme hauteur que son conteneur
+        line-height: 22px; 
+        width: 0;
+        background-color: $red;
+        box-sizing: border-box;
+        // Même border-radius que le conteneur
+        border-radius: 20px;
+    }
+}

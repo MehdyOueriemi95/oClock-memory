@@ -1,0 +1,35 @@
+// Fichier SASS qui gère le style des affichages des indications "Loupé" "Bien joué"
+
+#indicator_container {
+    position: absolute;
+    margin-top: 5%;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #good {
+        width: 200px;
+        height: 100px;
+        color: $good_color;
+        // C'est la variable $orange qu'il y'a dans _variable.scss
+        background-color: $orange;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $size_indicator;
+    }
+    #bad {
+        width: 200px;
+        height: 100px;
+        color: $bad_color;
+        background-color: $orange;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // C'est la variable $size_indicator qu'il y'a dans _variable.scss
+        font-size: $size_indicator;
+    }
+}

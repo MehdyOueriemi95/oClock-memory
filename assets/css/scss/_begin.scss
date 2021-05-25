@@ -1,0 +1,28 @@
+// Fichier SASS concernant le fichier html index.html => Pour l'écran du début
+
+#begin_container {
+    background-color: $grey;
+    // espacement à l'intérieur de la div
+    padding: 20px;
+    // coins arrondis
+    border-radius: 30px;
+    text-align: center;
+    width: 500px;
+    // Pour centrer en largeur notre conteneur
+    margin: 0 auto;
+    // On l'espace un peu du haut
+    margin-top: 10%;
+    a {
+        background-color: $blue;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        // On enleve le surlignage vu que nous avons une balise A qui est surlignée de base
+        text-decoration-line: none;
+        margin-top: 10%;
+        // Etat quand on survole le bouton
+        &:hover {
+            background-color: $red;
+        }
+    }
+}

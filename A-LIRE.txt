@@ -1,0 +1,73 @@
+------------------------------------------------------------------------------------------------------------
+----------------------------------------------- BONJOUR À TOUS ---------------------------------------------
+------------------------------------------------------------------------------------------------------------
+
+Pour commencer voici la liste des outils qu'il faut pour lancer le projet :
+    - Ton IDE favori pour pouvoir editer les fichiers de code de notre projet
+     => Pour ma part je te conseille Visual Studio Code plein de couleur et agréable d'utilisation
+        - https://code.visualstudio.com/
+    - Prepros pour pouvoir compiler notre code SASS pour en faire du magnifique CSS
+    => Parce que sans CSS notre memory serait un peu fade
+        - https://prepros.io/
+    - MAMP (pour les utilisateurs de la pomme et les autre aussi) ou WAMP (pour notre bon vieux Windows)
+    => Faut bien un serveur meme en local pour faire marcher le PHP et la base de données quand meme :) 
+        - https://www.mamp.info/en/downloads/
+        - https://www.wampserver.com/
+    - Un navigateur où tu te sens à l'aise pour inspecter le code
+    => Surtout pour y voir les beaux messages que j'ai mis dedans pour t'aider à comprendre
+    - Google trad si tu comprends pas le nom des variables => Certains developpeurs ont google trad ouvert pour
+    bien nommer leurs variables dans la langue de Shakespeare
+
+Ce projet trés complet nous permet de voir plusieurs notions du web éssentiel pour un développeur : 
+    - Le HTML => Un projet sans HTML n'est pas un projet Web
+    - Le SCSS / CSS => Je vous ai fait du SASS qu'ensuite Prepros à compiler et minifier en CSS
+    - JavaScript avec la lib JQUERY pour une manipulation plus simple des élèments du DOM HTML
+    - Un tout petit peu d'AJAX mais qui est éssentiel pour l'envoi en base
+    - Un peu de GSAP rien de compliqué pour animer le tout 
+    - Et bien sur du PHP pour communiquer avec notre base de données et pouvoir enregistrer le temps de nos
+    utilisateurs
+
+Vous êtes prêts ?? C'est parti !!!
+
+Voici les étapes d'installation du projet :
+    - Allume ton serveur local MAMP ou WAMP 
+    - Va dans le PhpMyAdmin du serveur importe dans une base de données le fichier SQL dans une table que tu as 
+    préalablement crée => Regarde dans game.php ligne 20 et met tes infos si tu en as des différentes que moi 
+    - Place dans le repo HTDOCS de ton serveur local le projet 
+    - Ensuite va le chercher avec l'interface web du serveur 
+    - Profite bien de ce magnifique jeu 
+    - N'hésite pas à modifier le code, si tu l'as cassé et que tu n'y arrive pas à revenir en arrière ce n'est pas grave 
+    ré-installe le :) 
+    - Pour modifier le SASS il faut ouvrir prepros et faire comme dans le tuto ci-dessous
+        https://www.alsacreations.com/outils/lire/1595-Prepros.html
+
+------------------------------------------------------------------------------------------------------------
+------------------------------------------- Arborescence du projet -----------------------------------------
+------------------------------------------------------------------------------------------------------------
+
+- /assets (LA OU NOUS AVONS PLACÉ LES FICHIERS STYLES ET LES IMAGES)
+--- /css
+----- /scss
+----- style.css
+--- /images
+- /controller (LA OU NOUS AVONS PLACÉ L'ALGORITHME DE NOTRE MEMORY LA LOGIQUE DE JEU ET L'ENVOI EN BASE VIA PHP)
+--- /js
+--- /php
+- /view (TOUS LES FICHIERS HTML DE NOTRE PROJET)
+- A-lire.txt (---> VOUS ÊTES ICI)
+- database.sql (LE FICHIER AVEC LA BASE DE DONNÉES À IMPORTER AVANT UTILISATION DU JEU)
+- index.php (PREMIÈRE PAGE DE NOTRE PETIT JEU)
+
+------------------------------------------------------------------------------------------------------------
+--------------------------------------------- BDD de notre projet ------------------------------------------
+------------------------------------------------------------------------------------------------------------
+Nom de la base : o-clock
+Table : Memory
+Structure de la table :
+    - ID(Primary Key) : C'est une bonne pratique à chaque fois que l'on crée une table on met un ID 
+                        Pour un souci de maintien et d'évoltuion je vous préconise de mettre un ID pour 
+                        identifier les valeurs de votre table
+                        => Cette valeur s'auto incremente pas besoin de la mettre dans votre INSERT
+    - finishDate : On enregistre la date à laquelle le joueur à fini sa partie pour avoir un historique si par 
+                   la suite nous voulons un historique des parties
+    - finishTime : L'enregistrement du temps dans lequel l'utilisateur a terminé le memory 

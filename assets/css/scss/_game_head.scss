@@ -1,0 +1,17 @@
+// Fichier SASS qui gère le style du header du jeu => La ou il y'a le titre
+
+#game_head_container {
+    // On utilise flex pour mettre sur la meme ligne le titre et meilleur temps
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    // Taille du conteneur
+    width: 500px;
+    // On aligne le conteneur dans la largeur
+    margin: 0 auto;
+    #best_time {
+        // On met l'écriture en italic
+        font-style: italic;
+    }
+}

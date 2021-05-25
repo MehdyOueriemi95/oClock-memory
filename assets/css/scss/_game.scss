@@ -1,0 +1,103 @@
+// Fichier SASS qui gère le style du plateau de jeu
+
+#game_container {
+    background-color: $grey;
+    padding: 20px;
+
+    // On utilise flex pour centrer complétement le jeu
+    // Flex Trés facile d'utilisation => La bible de flexbox https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    display: flex;
+    justify-content: center;
+
+    // On fixe la taille du conteneur du jeu tout en le centrant dans la largeur
+    width: 900px;
+    margin: 0 auto;
+
+    // coins arrondis
+    border-radius: 10px;
+
+    // On l'espace du titre de la page 
+    margin-top: 10%;
+    table {
+        tr {
+            td {
+                // Nous allons utiliser les sprites un outil rapide et éssentiel
+                // quand on a des images de ce type 
+                // Trés utile pour les états hover => etat au survol de la souris 
+                // Pour plus d'information 
+                // https://www.alsacreations.com/tuto/lire/1068-sprites-css-background-position.html
+
+                // On met d'abord les propriétés générales des div
+                div {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 10px;
+                    background-size: 100px;
+                    background-image: $image;
+                    // On change le curseur quand on survole la case
+                    // Un peu d'UX ça fait pas de mal => Plus intuitif pour l'utilisateur
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                // La class qui sert à cacher les cartes
+                .hide {
+                    background-color: grey;
+                    background-image: none;
+                }
+                // On fait chaque fruit
+                .banane {
+                    background-position-y: 1700px;
+                }
+                .orange {
+                    background-position-y: 1600px;
+                }
+                .citron_vert {
+                    background-position-y: 1500px;
+                }
+                .citron_jaune {
+                    background-position-y: 1200px;
+                }
+                .pomme {
+                    background-position-y: 0px;
+                }
+                .fraise {
+                    background-position-y: 1100px;
+                }
+                .pasteque {
+                    background-position-y: 700px;
+                }
+                .raisin {
+                    background-position-y: 800px;
+                }
+                .cerise {
+                    background-position-y: 400px;
+                }
+                .mangue {
+                    background-position-y: 200px;
+                }
+                .prune {
+                    background-position-y: 600px;
+                }
+                .poire {
+                    background-position-y: 500px;
+                }
+                .framboise {
+                    background-position-y: 300px;
+                }
+                .pomme_verte {
+                    background-position-y: 1000px;
+                }
+
+                // On grise les bonnes cartes
+                // On utilise important pour overrider GSAP qui laisse opacity 1 dans le DOM 
+                // CF votre inspecteur
+                .good {
+                    // On enlève le clique sur les élements trouvés
+                    pointer-events:none;
+                    opacity: 0.5!important;
+                }
+            }
+        }
+    }
+}

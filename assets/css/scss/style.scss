@@ -1,0 +1,23 @@
+// On demande au SASS de regrouper tous les SCSS en un seul fichier 
+// pour ensuite les compiler en un seul fichier CSS qui est à la racine du fichier /css
+// et qui s'appelle style.css
+
+// UN FICHIER SASS PAR COMPOSANT IDENTITFIÉ AU PRÉALABLE
+// Un composant c'est la barre de progression, le plateau de jeu, etc...
+
+// Import de la font google "Montserrat"
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Mise en place de la font dans tout le code
+body {
+    font-family: 'Montserrat', sans-serif;;
+}
+
+// Import de tous nos fichiers pour construire un seul et même fichier css
+@import "variables"; 
+@import "game"; 
+@import "indicator"; 
+@import "game_head"; 
+@import "loading_progress"; 
+@import "end"; 
+@import "begin"; 
